@@ -1,0 +1,17 @@
+{
+  "name": "turbulence-engine",
+  "description": "The main Turbulence API",
+  "version": "0.0.1",
+  "repository": "https://adityab@github.com/adityab/turbulence-engine.git",
+  "author": "Aditya Bhatt <aditya@adityabhatt.org> (http://adityabhatt.org)",
+  "main": "lib/turbulence-engine",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+      "turbulence-schemas": "0.0.1"
+  },
+  "engines": {
+    "node": "*"
+  }
+}
