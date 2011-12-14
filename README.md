@@ -10,11 +10,15 @@ The module is derivative-model agnostic, because annotation models are accessed 
     npm install -g
 
 ## Usage
+
+First off, connect to the Engine:
+
 ```js
 Engine = require('turbulence-engine');
 ```
 
 Next, Let's define two objects; one for an `Agent`:
+
 ```js
 var agentObj = 
 {
@@ -34,6 +38,7 @@ var agentObj =
 ```
 
 and one for a `Post`:
+
 ```js
 var postObj = 
 {
@@ -49,6 +54,7 @@ var postObj =
 
 Normally, such objects would be sent from the client-side.
 Let's define a function for some convenience:
+
 ```js
 function logAndDisconnect(err) {
     console.log(err.message);
@@ -57,6 +63,7 @@ function logAndDisconnect(err) {
 ```
 
 Now we'll connect to `Engine`, register our `agentObj`, and publish the `postObj`.
+
 ```js
 Engine.connect('localhost', 'loldb', function(err) {    if(err) logAndDisconnect(err);   else {
     // register our agent on the database, and on success, print the agent's ID
@@ -73,4 +80,5 @@ Engine.connect('localhost', 'loldb', function(err) {    if(err) logAndDisconnect
     }});
 }});
 ```
+
 That's it.
