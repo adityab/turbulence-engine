@@ -65,7 +65,7 @@ function logAndDisconnect(err) {
 Now we'll connect to `Engine`, register our `agentObj`, and publish the `postObj`.
 
 ```js
-Engine.connect('localhost', 'loldb', function(err) {    if(err) logAndDisconnect(err);   else {
+Engine.connect('localhost', 'turbulence_db', function(err) {    if(err) logAndDisconnect(err);   else {
     // register our agent on the database, and on success, print the agent's ID
     registerAgent(agentObj, function(err, agentID) {    if(err) logAndDisconnect(err);  else {
         console.log('agentID: ', agentID);
