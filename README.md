@@ -10,8 +10,6 @@ The module is derivative-model agnostic, because annotation models are accessed 
     npm install -g
 
 ## Usage
-
-First off, connect to the Engine:
 ```js
 Engine = require('turbulence-engine');
 ```
