@@ -67,15 +67,15 @@ Now we'll connect to `Engine`, register our `agentObj`, and publish the `postObj
 ```js
 Engine.connect('localhost', 'turbulence_db', function(err) {    if(err) logAndDisconnect(err);   else {
     // register our agent on the database, and on success, print the agent's ID
-    registerAgent(agentObj, function(err, agentID) {    if(err) logAndDisconnect(err);  else {
+    Engine.registerAgent(agentObj, function(err, agentID) {    if(err) logAndDisconnect(err);  else {
         console.log('agentID: ', agentID);
         // set our newly registered agent as the author of the post we will publish
         postObj.authorAgent = agentID;
         // publish our newly authored post to the database, and on success, print the post's ID
-        publishPost(postObj, function(err, postID) {   if(err) logAndDisconnect(err);  else {
+        Engine.publishPost(postObj, function(err, postID) {   if(err) logAndDisconnect(err);  else {
             console.log('postID: ', postID);
             // everything done. Now disconnect.
-            TurbulenceDB.disconnect();
+            Engine.disconnect();
         }});
     }});
 }});
